@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  db:
+    image: "postgres:11.5"
+    container_name: "postgres"
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_USER: postgres
+
+  pizza:
+    image: "pizza-pipeline:latest"
+    container_name: "pizza"
+    depends_on:
+      - "db"
+    restart: always

@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "p-limit": "^2.2.2",
-    "pg": "^7.18.1"
+    "pg": "^8.11.0"
   }
 }
